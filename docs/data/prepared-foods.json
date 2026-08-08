@@ -1,7 +1,7 @@
 {
   "title": "预制菜名单",
   "sourceFile": "预制菜.xlsx",
-  "generatedAt": "2026-08-08T22:43:46+08:00",
+  "generatedAt": "2026-08-08T23:44:43+08:00",
   "summary": {
     "total": 24,
     "withEvidence": 24,
@@ -11,7 +11,7 @@
   },
   "columns": {
     "name": "条目",
-    "related": "关联对象",
+    "related": "上传者",
     "note": "备注",
     "evidenceUrl": "证据链接"
   },

@@ -1,5 +1,5 @@
 const CONFIG = {
-  dataUrl: "./data/prepared-foods.json?v=20260808-clean",
+  dataUrl: "./data/prepared-foods.json?v=20260808-uploader",
   githubOwner: "xinyueguang",
   githubRepo: "prepared-food-list",
   submissionEndpoint: "",
@@ -162,7 +162,7 @@ function renderRows() {
             <span class="item-id">${escapeHtml(item.id)}</span>
             <div class="status-line"><span class="${statusBadgeClass(item.status)}">${escapeHtml(item.status)}</span></div>
             <div class="info-block">
-              <span class="info-label">开发者</span>
+              <span class="info-label">上传者</span>
               <span>${item.related ? escapeHtml(item.related) : `<span class="muted">未填写</span>`}</span>
             </div>
             ${renderTags(item.tags)}

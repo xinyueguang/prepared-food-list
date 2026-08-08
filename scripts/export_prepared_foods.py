@@ -223,7 +223,7 @@ def header_lookup(header: dict[int, str], fallback: int, *keywords: str) -> int:
 
 def has_header_row(row: dict[int, str]) -> bool:
     values = set(row.values())
-    return "名称" in values or "开发者（曾用名）" in values or "跳转链接" in values
+    return "名称" in values or "上传者" in values or "开发者（曾用名）" in values or "跳转链接" in values
 
 
 def write_item_images(
@@ -273,7 +273,7 @@ def build_payload(xlsx_path: Path) -> dict:
     evidence_image_col = header_lookup(header, 2, "证据")
     note_col = header_lookup(header, 3, "备注")
     evidence_url_col = header_lookup(header, 4, "跳转链接", "链接", "URL", "url")
-    related_col = header_lookup(header, 5, "开发者", "关联对象")
+    related_col = header_lookup(header, 5, "上传者", "开发者", "关联对象")
 
     for row_number, row in data_rows:
         name = row.get(name_col, "").strip()
@@ -334,7 +334,7 @@ def build_payload(xlsx_path: Path) -> dict:
         },
         "columns": {
             "name": "条目",
-            "related": "关联对象",
+            "related": "上传者",
             "note": "备注",
             "evidenceUrl": "证据链接",
         },
