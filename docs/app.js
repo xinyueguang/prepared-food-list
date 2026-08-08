@@ -26,6 +26,7 @@ const elements = {
   evidenceFilter: document.querySelector("#evidenceFilter"),
   copyVisible: document.querySelector("#copyVisible"),
   openSubmit: document.querySelector("#openSubmit"),
+  closeSubmit: document.querySelector("#closeSubmit"),
   dialog: document.querySelector("#submitDialog"),
   submissionForm: document.querySelector("#submissionForm"),
   copySubmission: document.querySelector("#copySubmission"),
@@ -89,6 +90,24 @@ function renderEvidence(item) {
   return `<a class="evidence-link" href="${escapeHtml(item.evidenceUrl)}" target="_blank" rel="noreferrer"><span>${escapeHtml(label)}</span></a>`;
 }
 
+function renderImages(images) {
+  if (!images || images.length === 0) return "";
+  return `
+    <div class="image-strip">
+      ${images
+        .map(
+          (image) => `
+            <a class="thumb" href="${escapeHtml(image.url)}" target="_blank" rel="noreferrer" title="${escapeHtml(image.label)}">
+              <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.label)}">
+              <span>${escapeHtml(image.label)}</span>
+            </a>
+          `
+        )
+        .join("")}
+    </div>
+  `;
+}
+
 function fillFilters() {
   const statuses = uniqueSorted(state.items.map((item) => item.status));
   elements.statusFilter.innerHTML = `<option value="">全部状态</option>${statuses
@@ -125,6 +144,7 @@ function renderRows() {
           <td>
             <span class="item-name">${escapeHtml(item.name)}</span>
             <span class="item-id">${escapeHtml(item.id)}</span>
+            ${renderImages(item.images)}
             ${renderTags(item.tags)}
           </td>
           <td class="related-cell">${item.related ? escapeHtml(item.related) : `<span class="muted">未填写</span>`}</td>
@@ -266,6 +286,7 @@ elements.copyVisible.addEventListener("click", () => {
   copyText(visibleRowsAsText(), `已复制 ${state.filtered.length} 条结果。`);
 });
 elements.openSubmit.addEventListener("click", () => elements.dialog.showModal());
+elements.closeSubmit.addEventListener("click", () => elements.dialog.close());
 elements.copySubmission.addEventListener("click", () => {
   const payload = collectSubmission();
   copyText(JSON.stringify(payload, null, 2), "投稿 JSON 已复制。");

@@ -5,8 +5,9 @@ import json
 import re
 import sys
 import zipfile
+import posixpath
 from datetime import datetime
-from pathlib import Path, PurePosixPath
+from pathlib import Path
 from urllib.parse import urlparse
 from xml.etree import ElementTree as ET
 
@@ -15,6 +16,8 @@ NS = {
     "main": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
     "rel": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
     "pkgrel": "http://schemas.openxmlformats.org/package/2006/relationships",
+    "xdr": "http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing",
+    "a": "http://schemas.openxmlformats.org/drawingml/2006/main",
 }
 
 
@@ -40,7 +43,7 @@ def read_shared_strings(archive: zipfile.ZipFile) -> list[str]:
     return strings
 
 
-def first_sheet_path(archive: zipfile.ZipFile) -> str:
+def first_sheet_info(archive: zipfile.ZipFile) -> tuple[str, str]:
     workbook = ET.fromstring(archive.read("xl/workbook.xml"))
     relationships = ET.fromstring(archive.read("xl/_rels/workbook.xml.rels"))
 
@@ -48,6 +51,7 @@ def first_sheet_path(archive: zipfile.ZipFile) -> str:
     if sheet is None:
         raise ValueError("工作簿里没有工作表")
 
+    sheet_name = sheet.attrib.get("name", "Sheet1")
     relationship_id = sheet.attrib[f"{{{NS['rel']}}}id"]
     target = None
     for rel in relationships.findall("pkgrel:Relationship", NS):
@@ -59,8 +63,8 @@ def first_sheet_path(archive: zipfile.ZipFile) -> str:
         raise ValueError("找不到第一个工作表的文件路径")
 
     if target.startswith("/"):
-        return target.lstrip("/")
-    return str(PurePosixPath("xl") / target)
+        return sheet_name, target.lstrip("/")
+    return sheet_name, posixpath.normpath(posixpath.join("xl", target))
 
 
 def cell_value(cell: ET.Element, shared_strings: list[str]) -> str:
@@ -83,14 +87,15 @@ def cell_value(cell: ET.Element, shared_strings: list[str]) -> str:
     return raw_value.strip()
 
 
-def read_rows(xlsx_path: Path) -> list[dict[int, str]]:
+def read_rows(xlsx_path: Path) -> list[tuple[int, dict[int, str]]]:
     with zipfile.ZipFile(xlsx_path) as archive:
         shared_strings = read_shared_strings(archive)
-        sheet_path = first_sheet_path(archive)
+        _, sheet_path = first_sheet_info(archive)
         root = ET.fromstring(archive.read(sheet_path))
 
-    rows: list[dict[int, str]] = []
+    rows: list[tuple[int, dict[int, str]]] = []
     for row in root.findall(".//main:sheetData/main:row", NS):
+        row_number = int(row.attrib.get("r", len(rows) + 1))
         values: dict[int, str] = {}
         for cell in row.findall("main:c", NS):
             reference = cell.attrib.get("r", "")
@@ -100,8 +105,77 @@ def read_rows(xlsx_path: Path) -> list[dict[int, str]]:
             if value:
                 values[cell_to_col_index(reference)] = value
         if values:
-            rows.append(values)
+            rows.append((row_number, values))
     return rows
+
+
+def relationship_map(archive: zipfile.ZipFile, rels_path: str) -> dict[str, str]:
+    try:
+        root = ET.fromstring(archive.read(rels_path))
+    except KeyError:
+        return {}
+
+    return {rel.attrib["Id"]: rel.attrib["Target"] for rel in root.findall("pkgrel:Relationship", NS)}
+
+
+def normalize_archive_path(base_path: str, target: str) -> str:
+    if target.startswith("/"):
+        return target.lstrip("/")
+    return posixpath.normpath(posixpath.join(posixpath.dirname(base_path), target))
+
+
+def read_embedded_images(xlsx_path: Path) -> dict[tuple[int, int], list[dict[str, object]]]:
+    images: dict[tuple[int, int], list[dict[str, object]]] = {}
+    with zipfile.ZipFile(xlsx_path) as archive:
+        drawing_paths = [
+            name
+            for name in archive.namelist()
+            if name.startswith("xl/drawings/")
+            and name.endswith(".xml")
+            and not name.startswith("xl/drawings/_rels/")
+        ]
+
+        for drawing_path in drawing_paths:
+            rels_path = posixpath.join(
+                posixpath.dirname(drawing_path),
+                "_rels",
+                f"{posixpath.basename(drawing_path)}.rels",
+            )
+            rels = relationship_map(archive, rels_path)
+            root = ET.fromstring(archive.read(drawing_path))
+
+            for anchor in root:
+                from_node = anchor.find("xdr:from", NS)
+                blip = anchor.find(".//a:blip", NS)
+                if from_node is None or blip is None:
+                    continue
+
+                row_text = from_node.findtext("xdr:row", namespaces=NS)
+                col_text = from_node.findtext("xdr:col", namespaces=NS)
+                relationship_id = blip.attrib.get(f"{{{NS['rel']}}}embed")
+                if row_text is None or col_text is None or not relationship_id:
+                    continue
+
+                target = rels.get(relationship_id)
+                if not target:
+                    continue
+
+                media_path = normalize_archive_path(drawing_path, target)
+                if media_path not in archive.namelist():
+                    continue
+
+                row_number = int(row_text) + 1
+                col_index = int(col_text)
+                extension = Path(media_path).suffix.lower() or ".png"
+                images.setdefault((row_number, col_index), []).append(
+                    {
+                        "mediaPath": media_path,
+                        "extension": extension,
+                        "data": archive.read(media_path),
+                    }
+                )
+
+    return images
 
 
 def evidence_host(url: str) -> str:
@@ -129,29 +203,104 @@ def detect_tags(*parts: str) -> list[str]:
     return tags
 
 
-def status_for(note: str, evidence_url: str) -> str:
-    if note and evidence_url:
-        return "有备注与链接"
-    if evidence_url:
-        return "有证据链接"
+def status_for(note: str, has_evidence: bool) -> str:
+    if note and has_evidence:
+        return "有备注与证据"
+    if has_evidence:
+        return "有证据"
     if note:
         return "有备注"
     return "待补充证据"
 
 
+def header_lookup(header: dict[int, str], fallback: int, *keywords: str) -> int:
+    for index, value in header.items():
+        for keyword in keywords:
+            if keyword in value:
+                return index
+    return fallback
+
+
+def has_header_row(row: dict[int, str]) -> bool:
+    values = set(row.values())
+    return "名称" in values or "开发者（曾用名）" in values or "跳转链接" in values
+
+
+def write_item_images(
+    images: dict[tuple[int, int], list[dict[str, object]]],
+    row_number: int,
+    col_index: int,
+    item_id: str,
+    slug: str,
+    label: str,
+    output_dir: Path,
+) -> list[dict[str, str]]:
+    extracted: list[dict[str, str]] = []
+    for image_index, image in enumerate(images.get((row_number, col_index), []), start=1):
+        extension = str(image["extension"])
+        suffix = f"-{image_index}" if image_index > 1 else ""
+        filename = f"{item_id}-{slug}{suffix}{extension}"
+        target = output_dir / filename
+        target.write_bytes(image["data"])
+        extracted.append(
+            {
+                "label": label,
+                "url": f"assets/images/{filename}",
+            }
+        )
+    return extracted
+
+
 def build_payload(xlsx_path: Path) -> dict:
     rows = read_rows(xlsx_path)
+    images = read_embedded_images(xlsx_path)
     items: list[dict[str, object]] = []
+    image_output_dir = Path("docs/assets/images")
+    image_output_dir.mkdir(parents=True, exist_ok=True)
 
-    for row in rows:
-        name = row.get(0, "").strip()
+    if rows and has_header_row(rows[0][1]):
+        header = rows[0][1]
+        data_rows = rows[1:]
+    else:
+        header = {}
+        data_rows = rows
+
+    name_col = header_lookup(header, 0, "名称", "条目")
+    project_image_col = header_lookup(header, 1, "金海豚项目", "项目")
+    evidence_image_col = header_lookup(header, 2, "证据")
+    note_col = header_lookup(header, 3, "备注")
+    evidence_url_col = header_lookup(header, 4, "跳转链接", "链接", "URL", "url")
+    related_col = header_lookup(header, 5, "开发者", "关联对象")
+
+    for row_number, row in data_rows:
+        name = row.get(name_col, "").strip()
         if not name:
             continue
 
-        note = row.get(3, "").strip()
-        evidence_url = row.get(4, "").strip()
-        related = row.get(5, "").strip()
+        note = row.get(note_col, "").strip()
+        evidence_url = row.get(evidence_url_col, "").strip()
+        related = row.get(related_col, "").strip()
         item_id = f"yc-{len(items) + 1:03d}"
+        project_images = write_item_images(
+            images,
+            row_number,
+            project_image_col,
+            item_id,
+            "project",
+            header.get(project_image_col, "金海豚项目"),
+            image_output_dir,
+        )
+        evidence_images = write_item_images(
+            images,
+            row_number,
+            evidence_image_col,
+            item_id,
+            "evidence",
+            header.get(evidence_image_col, "证据"),
+            image_output_dir,
+        )
+        item_images = project_images + evidence_images
+        has_evidence = bool(evidence_url or evidence_images)
         items.append(
             {
                 "id": item_id,
@@ -160,7 +309,10 @@ def build_payload(xlsx_path: Path) -> dict:
                 "note": note,
                 "evidenceUrl": evidence_url,
                 "evidenceHost": evidence_host(evidence_url),
-                "status": status_for(note, evidence_url),
+                "images": item_images,
+                "projectImages": project_images,
+                "evidenceImages": evidence_images,
+                "status": status_for(note, has_evidence),
                 "tags": detect_tags(related, note, evidence_url),
             }
         )
@@ -172,9 +324,10 @@ def build_payload(xlsx_path: Path) -> dict:
         "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
         "summary": {
             "total": len(items),
-            "withEvidence": sum(1 for item in items if item["evidenceUrl"]),
+            "withEvidence": sum(1 for item in items if item["evidenceUrl"] or item["evidenceImages"]),
             "withNotes": sum(1 for item in items if item["note"]),
             "relatedCount": len(related_values),
+            "withImages": sum(1 for item in items if item["images"]),
         },
         "columns": {
             "name": "条目",
@@ -192,11 +345,33 @@ def write_csv(payload: dict, csv_path: Path) -> None:
     with csv_path.open("w", encoding="utf-8-sig", newline="") as file:
         writer = csv.DictWriter(
             file,
-            fieldnames=["id", "name", "related", "status", "note", "evidenceUrl", "evidenceHost", "tags"],
+            fieldnames=[
+                "id",
+                "name",
+                "related",
+                "status",
+                "note",
+                "evidenceUrl",
+                "evidenceHost",
+                "images",
+                "tags",
+            ],
         )
         writer.writeheader()
         for item in payload["items"]:
-            writer.writerow({**item, "tags": "、".join(item.get("tags", []))})
+            writer.writerow(
+                {
+                    "id": item["id"],
+                    "name": item["name"],
+                    "related": item["related"],
+                    "status": item["status"],
+                    "note": item["note"],
+                    "evidenceUrl": item["evidenceUrl"],
+                    "evidenceHost": item["evidenceHost"],
+                    "images": "、".join(image["url"] for image in item.get("images", [])),
+                    "tags": "、".join(item.get("tags", [])),
+                }
+            )
 
 
 def main() -> int:

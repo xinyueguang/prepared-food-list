@@ -1,12 +1,13 @@
 {
   "title": "预制菜名单",
   "sourceFile": "预制菜.xlsx",
-  "generatedAt": "2026-08-08T13:18:26+08:00",
+  "generatedAt": "2026-08-08T13:40:48+08:00",
   "summary": {
     "total": 24,
-    "withEvidence": 8,
+    "withEvidence": 24,
     "withNotes": 10,
-    "relatedCount": 19
+    "relatedCount": 19,
+    "withImages": 24
   },
   "columns": {
     "name": "条目",
@@ -22,7 +23,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-001-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-001-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-001-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-001-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": [
         "聚光灯"
       ]
@@ -34,7 +57,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-002-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-002-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-002-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-002-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -44,7 +89,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-003-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-003-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-003-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-003-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -54,7 +121,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-004-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-004-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-004-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-004-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -64,7 +153,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-005-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-005-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-005-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-005-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -74,7 +185,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-006-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-006-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-006-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-006-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -84,7 +217,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-007-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-007-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-007-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-007-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": [
         "聚光灯"
       ]
@@ -96,7 +251,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-008-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-008-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-008-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-008-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -106,7 +283,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-009-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-009-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-009-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-009-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -116,7 +315,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-010-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-010-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-010-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-010-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -126,7 +347,29 @@
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "待补充证据",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-011-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-011-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-011-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-011-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": []
     },
     {
@@ -136,7 +379,29 @@
       "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1xVKVzCEcM/?spm_id_from=333.337.search-card.all.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
       "evidenceHost": "bilibili.com",
-      "status": "有证据链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-012-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-012-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-012-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-012-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": [
         "聚光灯",
         "B站"
@@ -149,7 +414,29 @@
       "note": "（裤）",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "有备注",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-013-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-013-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-013-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-013-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": []
     },
     {
@@ -159,7 +446,29 @@
       "note": "（裤）",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "有备注",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-014-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-014-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-014-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-014-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "无开发者验证"
       ]
@@ -171,7 +480,29 @@
       "note": "（裤）",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "有备注",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-015-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-015-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-015-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-015-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "无开发者验证"
       ]
@@ -183,7 +514,29 @@
       "note": "b站与比赛同素材，不同颜色，但素材和玩法依然一模一样",
       "evidenceUrl": "https://www.bilibili.com/video/BV1oQXaBHE1Z/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
       "evidenceHost": "bilibili.com",
-      "status": "有备注与链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-016-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-016-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-016-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-016-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "B站"
       ]
@@ -195,7 +548,29 @@
       "note": "（裤）",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "有备注",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-017-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-017-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-017-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-017-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "聚光灯"
       ]
@@ -207,7 +582,29 @@
       "note": "（裤）",
       "evidenceUrl": "",
       "evidenceHost": "",
-      "status": "有备注",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-018-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-018-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-018-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-018-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "疑似"
       ]
@@ -219,7 +616,29 @@
       "note": "（裤）",
       "evidenceUrl": "https://www.bilibili.com/video/BV1RgzZYfECt/?spm_id_from=333.337.search-card.all.click&vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
-      "status": "有备注与链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-019-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-019-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-019-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-019-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "B站"
       ]
@@ -231,7 +650,29 @@
       "note": "（裤）",
       "evidenceUrl": "https://www.bilibili.com/video/BV1acSyBNEsW/?vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
-      "status": "有备注与链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-020-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-020-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-020-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-020-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "B站"
       ]
@@ -243,7 +684,29 @@
       "note": "（裤）",
       "evidenceUrl": "https://www.bilibili.com/video/BV1LF7969Evc/?vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
-      "status": "有备注与链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-021-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-021-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-021-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-021-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "B站"
       ]
@@ -255,7 +718,29 @@
       "note": "（裤）",
       "evidenceUrl": "https://space.bilibili.com/501185163?spm_id_from=333.788.upinfo.head.click",
       "evidenceHost": "space.bilibili.com",
-      "status": "有备注与链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-022-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-022-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-022-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-022-evidence.png"
+        }
+      ],
+      "status": "有备注与证据",
       "tags": [
         "B站"
       ]
@@ -267,7 +752,29 @@
       "note": "",
       "evidenceUrl": "https://supernail.itch.io/echoes-of-memories",
       "evidenceHost": "supernail.itch.io",
-      "status": "有证据链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-023-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-023-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-023-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-023-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": [
         "itch.io"
       ]
@@ -279,7 +786,29 @@
       "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV19bwjzsEVd/?vd_source=7b47ccdeb6676630869e49a80d2f842a",
       "evidenceHost": "bilibili.com",
-      "status": "有证据链接",
+      "images": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-024-project.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-024-evidence.png"
+        }
+      ],
+      "projectImages": [
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-024-project.png"
+        }
+      ],
+      "evidenceImages": [
+        {
+          "label": "证据",
+          "url": "assets/images/yc-024-evidence.png"
+        }
+      ],
+      "status": "有证据",
       "tags": [
         "B站"
       ]
