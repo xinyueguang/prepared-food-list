@@ -90,20 +90,33 @@ function renderEvidence(item) {
   return `<a class="evidence-link" href="${escapeHtml(item.evidenceUrl)}" target="_blank" rel="noreferrer"><span>${escapeHtml(label)}</span></a>`;
 }
 
-function renderImages(images) {
-  if (!images || images.length === 0) return "";
+function renderImagePanel(label, image) {
+  if (!image) {
+    return `
+      <div class="compare-panel compare-panel--empty">
+        <div class="compare-panel__head">${escapeHtml(label)}</div>
+        <div class="compare-empty">暂无图片</div>
+      </div>
+    `;
+  }
+
   return `
-    <div class="image-strip">
-      ${images
-        .map(
-          (image) => `
-            <a class="thumb" href="${escapeHtml(image.url)}" target="_blank" rel="noreferrer" title="${escapeHtml(image.label)}">
-              <img src="${escapeHtml(image.url)}" alt="${escapeHtml(image.label)}">
-              <span>${escapeHtml(image.label)}</span>
-            </a>
-          `
-        )
-        .join("")}
+    <a class="compare-panel" href="${escapeHtml(image.url)}" target="_blank" rel="noreferrer" title="打开${escapeHtml(label)}">
+      <div class="compare-panel__head">${escapeHtml(label)}</div>
+      <div class="compare-frame">
+        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(label)}">
+      </div>
+    </a>
+  `;
+}
+
+function renderImageComparison(item) {
+  const projectImage = item.projectImages?.[0] || item.images?.find((image) => image.label?.includes("金海豚"));
+  const evidenceImage = item.evidenceImages?.[0] || item.images?.find((image) => image.label?.includes("证据"));
+  return `
+    <div class="compare-grid">
+      ${renderImagePanel("金海豚项目图片", projectImage)}
+      ${renderImagePanel("证据图片", evidenceImage)}
     </div>
   `;
 }
@@ -141,16 +154,23 @@ function renderRows() {
       (item, index) => `
         <tr>
           <td class="col-index">${index + 1}</td>
-          <td>
+          <td class="image-compare-cell">
+            ${renderImageComparison(item)}
+          </td>
+          <td class="compact-info-cell">
             <span class="item-name">${escapeHtml(item.name)}</span>
             <span class="item-id">${escapeHtml(item.id)}</span>
-            ${renderImages(item.images)}
+            <div class="status-line"><span class="${statusBadgeClass(item.status)}">${escapeHtml(item.status)}</span></div>
+            <div class="info-block">
+              <span class="info-label">开发者</span>
+              <span>${item.related ? escapeHtml(item.related) : `<span class="muted">未填写</span>`}</span>
+            </div>
             ${renderTags(item.tags)}
           </td>
-          <td class="related-cell">${item.related ? escapeHtml(item.related) : `<span class="muted">未填写</span>`}</td>
-          <td><span class="${statusBadgeClass(item.status)}">${escapeHtml(item.status)}</span></td>
-          <td class="note-cell">${item.note ? escapeHtml(item.note) : `<span class="muted">无备注</span>`}</td>
-          <td>${renderEvidence(item)}</td>
+          <td class="note-link-cell">
+            <div class="note-cell">${item.note ? escapeHtml(item.note) : `<span class="muted">无备注</span>`}</div>
+            <div class="link-stack">${renderEvidence(item)}</div>
+          </td>
         </tr>
       `
     )
