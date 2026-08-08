@@ -126,7 +126,7 @@ textarea {
 }
 
 .app {
-  width: min(1480px, calc(100% - 32px));
+  width: min(1800px, calc(100% - 32px));
   margin: 24px auto 48px;
 }
 
@@ -347,7 +347,7 @@ h2 {
 
 table {
   width: 100%;
-  min-width: 1180px;
+  min-width: 1360px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -379,15 +379,15 @@ td {
 }
 
 .col-images {
-  width: 68%;
+  width: 76%;
 }
 
 .col-info {
-  width: 16%;
+  width: 12%;
 }
 
 .col-note {
-  width: 16%;
+  width: 12%;
 }
 
 .item-name {
@@ -459,7 +459,7 @@ td {
   display: grid;
   place-items: center;
   aspect-ratio: 16 / 10;
-  min-height: 230px;
+  min-height: 300px;
   background: #eef1ed;
 }
 
@@ -474,7 +474,7 @@ td {
   display: grid;
   place-items: center;
   aspect-ratio: 16 / 10;
-  min-height: 230px;
+  min-height: 300px;
   color: var(--muted);
   background: #eef1ed;
 }
