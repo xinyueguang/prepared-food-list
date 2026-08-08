@@ -1,12 +1,12 @@
 {
   "title": "预制菜名单",
   "sourceFile": "预制菜.xlsx",
-  "generatedAt": "2026-08-08T15:32:32+08:00",
+  "generatedAt": "2026-08-08T19:42:43+08:00",
   "summary": {
     "total": 24,
     "withEvidence": 24,
     "withNotes": 1,
-    "relatedCount": 19,
+    "relatedCount": 21,
     "withImages": 24
   },
   "columns": {
@@ -410,7 +410,7 @@
     {
       "id": "yc-013",
       "name": "冒牌上班族",
-      "related": "浮华（垣界猫行工作室、CUBR游戏工作室）",
+      "related": "浮华",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -442,7 +442,7 @@
     {
       "id": "yc-014",
       "name": "小鸥快骰",
-      "related": "“无开发者验证”（回游工作室）",
+      "related": "“无开发者验证”",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -476,7 +476,7 @@
     {
       "id": "yc-015",
       "name": "听山",
-      "related": "“无开发者验证”（克势力工作室）",
+      "related": "“无开发者验证”",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -510,7 +510,7 @@
     {
       "id": "yc-016",
       "name": "端点：入侵协议",
-      "related": "MYB（三山工作室）",
+      "related": "MYB",
       "note": "b站与比赛同素材，不同颜色，但素材和玩法依然一模一样",
       "evidenceUrl": "https://www.bilibili.com/video/BV1oQXaBHE1Z/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
       "evidenceHost": "bilibili.com",
@@ -544,7 +544,7 @@
     {
       "id": "yc-017",
       "name": "Eclipsa",
-      "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
+      "related": "亚当工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -571,14 +571,12 @@
         }
       ],
       "status": "有证据",
-      "tags": [
-        "聚光灯"
-      ]
+      "tags": []
     },
     {
       "id": "yc-018",
       "name": "奶茶店模拟器：重生之我在冰堡甜城当店长",
-      "related": "财可咪工作室（Erabit）",
+      "related": "财可咪工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -644,7 +642,7 @@
     {
       "id": "yc-020",
       "name": "Eat Is Rule",
-      "related": "CUBR游戏工作室（垣界猫行工作室、浮华）",
+      "related": "CUBR游戏工作室",
       "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1acSyBNEsW/?vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
@@ -678,7 +676,7 @@
     {
       "id": "yc-021",
       "name": "Lord of Wonders",
-      "related": "ZYX（ammo-C4）",
+      "related": "ZYX",
       "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1LF7969Evc/?vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
@@ -712,7 +710,7 @@
     {
       "id": "yc-022",
       "name": "Stepping Parkour",
-      "related": "ShadowD（ammo-C4、ZYX）",
+      "related": "ShadowD",
       "note": "",
       "evidenceUrl": "https://space.bilibili.com/501185163?spm_id_from=333.788.upinfo.head.click",
       "evidenceHost": "space.bilibili.com",
@@ -746,7 +744,7 @@
     {
       "id": "yc-023",
       "name": "回忆回想",
-      "related": "SN（SuperNail）",
+      "related": "SN",
       "note": "",
       "evidenceUrl": "https://supernail.itch.io/echoes-of-memories",
       "evidenceHost": "supernail.itch.io",
@@ -780,7 +778,7 @@
     {
       "id": "yc-024",
       "name": "块块相连",
-      "related": "SN（SuperNail）",
+      "related": "SN",
       "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV19bwjzsEVd/?vd_source=7b47ccdeb6676630869e49a80d2f842a",
       "evidenceHost": "bilibili.com",
