@@ -75,7 +75,7 @@
           </select>
         </label>
         <label class="field">
-          <span>证据</span>
+          <span>证据链接</span>
           <select id="evidenceFilter">
             <option value="">全部</option>
             <option value="with">有链接</option>
@@ -105,7 +105,7 @@
                 <th>关联对象</th>
                 <th>状态</th>
                 <th>备注</th>
-                <th>证据</th>
+                <th>证据链接</th>
               </tr>
             </thead>
             <tbody id="itemsBody"></tbody>
@@ -128,24 +128,28 @@
         </div>
 
         <label class="field">
-          <span>条目名称</span>
+          <span>名称</span>
           <input id="submissionName" name="name" required autocomplete="off">
         </label>
         <label class="field">
-          <span>关联对象</span>
-          <input id="submissionRelated" name="related" autocomplete="off">
+          <span>金海豚项目图片</span>
+          <input id="submissionProjectImage" name="projectImage" type="file" accept="image/*" required>
         </label>
         <label class="field">
-          <span>证据链接</span>
-          <input id="submissionEvidence" name="evidenceUrl" type="url" autocomplete="off">
+          <span>证据图片</span>
+          <input id="submissionEvidenceImage" name="evidenceImage" type="file" accept="image/*" required>
         </label>
         <label class="field">
           <span>备注</span>
           <textarea id="submissionNote" name="note" rows="4"></textarea>
         </label>
         <label class="field">
-          <span>联系方式</span>
-          <input id="submissionContact" name="contact" autocomplete="off">
+          <span>跳转链接</span>
+          <input id="submissionLink" name="linkUrl" type="url" autocomplete="off">
+        </label>
+        <label class="field">
+          <span>开发者（曾用名）</span>
+          <input id="submissionDeveloper" name="developer" autocomplete="off">
         </label>
 
         <div class="dialog-actions">

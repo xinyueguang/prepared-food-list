@@ -186,7 +186,7 @@ function visibleRowsAsText() {
         item.related ? `关联对象：${item.related}` : "",
         `状态：${item.status}`,
         item.note ? `备注：${item.note}` : "",
-        item.evidenceUrl ? `证据：${item.evidenceUrl}` : "",
+        item.evidenceUrl ? `证据链接：${item.evidenceUrl}` : "",
       ].filter(Boolean);
       return lines.join("\n");
     })
@@ -198,36 +198,52 @@ async function copyText(text, message) {
   showToast(message);
 }
 
+function fileSummary(input) {
+  const file = input.files?.[0];
+  if (!file) return null;
+  return {
+    name: file.name,
+    size: file.size,
+    type: file.type,
+  };
+}
+
 function collectSubmission() {
+  const projectImageInput = document.querySelector("#submissionProjectImage");
+  const evidenceImageInput = document.querySelector("#submissionEvidenceImage");
   return {
     name: document.querySelector("#submissionName").value.trim(),
-    related: document.querySelector("#submissionRelated").value.trim(),
-    evidenceUrl: document.querySelector("#submissionEvidence").value.trim(),
+    projectImage: fileSummary(projectImageInput),
+    evidenceImage: fileSummary(evidenceImageInput),
     note: document.querySelector("#submissionNote").value.trim(),
-    contact: document.querySelector("#submissionContact").value.trim(),
+    linkUrl: document.querySelector("#submissionLink").value.trim(),
+    developer: document.querySelector("#submissionDeveloper").value.trim(),
     submittedAt: new Date().toISOString(),
   };
 }
 
 function submissionMarkdown(payload) {
   return [
-    "### 条目名称",
+    "### 名称",
     payload.name || "未填写",
     "",
-    "### 关联对象",
-    payload.related || "未填写",
+    "### 金海豚项目图片",
+    payload.projectImage?.name || "未上传",
     "",
-    "### 证据链接",
-    payload.evidenceUrl || "未填写",
+    "### 证据图片",
+    payload.evidenceImage?.name || "未上传",
     "",
     "### 备注",
     payload.note || "未填写",
     "",
-    "### 联系方式",
-    payload.contact || "未填写",
+    "### 跳转链接",
+    payload.linkUrl || "未填写",
+    "",
+    "### 开发者（曾用名）",
+    payload.developer || "未填写",
     "",
     "---",
-    "来自网站投稿入口。合并到公开数据前请人工核验。",
+    "来自网站投稿入口。合并到公开数据前请人工核验；如使用 GitHub Issues，请在本 issue 中附上两张图片原文件。",
   ].join("\n");
 }
 
@@ -244,10 +260,11 @@ function githubIssueUrl(payload) {
 
 async function sendSubmission(payload) {
   if (CONFIG.submissionEndpoint) {
+    const formData = new FormData(elements.submissionForm);
+    formData.set("submittedAt", payload.submittedAt);
     const response = await fetch(CONFIG.submissionEndpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      body: formData,
     });
     if (!response.ok) throw new Error("投稿接口返回失败");
     showToast("投稿已发送。");
@@ -294,8 +311,8 @@ elements.copySubmission.addEventListener("click", () => {
 elements.submissionForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const payload = collectSubmission();
-  if (!payload.name) {
-    showToast("请填写条目名称。");
+  if (!payload.name || !payload.projectImage || !payload.evidenceImage) {
+    showToast("请填写名称，并上传两张必填图片。");
     return;
   }
   try {

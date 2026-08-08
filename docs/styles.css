@@ -247,6 +247,10 @@ h2 {
   padding: 0 12px;
 }
 
+.field input[type="file"] {
+  padding: 8px 10px;
+}
+
 .field textarea {
   resize: vertical;
   min-height: 104px;
@@ -641,7 +645,7 @@ td {
   }
 
   td:nth-child(6)::before {
-    content: "证据";
+    content: "证据链接";
   }
 
   .col-index,

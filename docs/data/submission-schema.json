@@ -2,28 +2,32 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "预制菜名单投稿",
   "type": "object",
-  "required": ["name"],
+  "required": ["name", "projectImage", "evidenceImage"],
   "properties": {
     "name": {
       "type": "string",
-      "title": "条目名称"
+      "title": "名称"
     },
-    "related": {
+    "projectImage": {
       "type": "string",
-      "title": "关联对象"
+      "title": "金海豚项目图片"
     },
-    "evidenceUrl": {
+    "evidenceImage": {
       "type": "string",
-      "format": "uri",
-      "title": "证据链接"
+      "title": "证据图片"
     },
     "note": {
       "type": "string",
       "title": "备注"
     },
-    "contact": {
+    "linkUrl": {
       "type": "string",
-      "title": "联系方式"
+      "format": "uri",
+      "title": "跳转链接"
+    },
+    "developer": {
+      "type": "string",
+      "title": "开发者（曾用名）"
     },
     "submittedAt": {
       "type": "string",
