@@ -1,11 +1,11 @@
 {
   "title": "预制菜名单",
   "sourceFile": "预制菜.xlsx",
-  "generatedAt": "2026-08-08T13:40:48+08:00",
+  "generatedAt": "2026-08-08T15:25:00+08:00",
   "summary": {
     "total": 24,
     "withEvidence": 24,
-    "withNotes": 10,
+    "withNotes": 1,
     "relatedCount": 19,
     "withImages": 24
   },
@@ -411,7 +411,7 @@
       "id": "yc-013",
       "name": "冒牌上班族",
       "related": "浮华（垣界猫行工作室、CUBR游戏工作室）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
       "images": [
@@ -436,14 +436,14 @@
           "url": "assets/images/yc-013-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": []
     },
     {
       "id": "yc-014",
       "name": "小鸥快骰",
       "related": "“无开发者验证”（回游工作室）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
       "images": [
@@ -468,7 +468,7 @@
           "url": "assets/images/yc-014-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "无开发者验证"
       ]
@@ -477,7 +477,7 @@
       "id": "yc-015",
       "name": "听山",
       "related": "“无开发者验证”（克势力工作室）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
       "images": [
@@ -502,7 +502,7 @@
           "url": "assets/images/yc-015-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "无开发者验证"
       ]
@@ -545,7 +545,7 @@
       "id": "yc-017",
       "name": "Eclipsa",
       "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
       "images": [
@@ -570,7 +570,7 @@
           "url": "assets/images/yc-017-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "聚光灯"
       ]
@@ -578,8 +578,8 @@
     {
       "id": "yc-018",
       "name": "奶茶店模拟器：重生之我在冰堡甜城当店长",
-      "related": "财可咪工作室（Erabit（疑似发行））",
-      "note": "（裤）",
+      "related": "财可咪工作室（Erabit）",
+      "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
       "images": [
@@ -604,16 +604,14 @@
           "url": "assets/images/yc-018-evidence.png"
         }
       ],
-      "status": "有备注与证据",
-      "tags": [
-        "疑似"
-      ]
+      "status": "有证据",
+      "tags": []
     },
     {
       "id": "yc-019",
       "name": "Dream Builder",
       "related": "橘黄色苏丹三",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1RgzZYfECt/?spm_id_from=333.337.search-card.all.click&vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
       "images": [
@@ -638,7 +636,7 @@
           "url": "assets/images/yc-019-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "B站"
       ]
@@ -647,7 +645,7 @@
       "id": "yc-020",
       "name": "Eat Is Rule",
       "related": "CUBR游戏工作室（垣界猫行工作室、浮华）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1acSyBNEsW/?vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
       "images": [
@@ -672,7 +670,7 @@
           "url": "assets/images/yc-020-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "B站"
       ]
@@ -681,7 +679,7 @@
       "id": "yc-021",
       "name": "Lord of Wonders",
       "related": "ZYX（ammo-C4）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1LF7969Evc/?vd_source=3e560f1e17dc1836cb3ca08889357990",
       "evidenceHost": "bilibili.com",
       "images": [
@@ -706,7 +704,7 @@
           "url": "assets/images/yc-021-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "B站"
       ]
@@ -715,7 +713,7 @@
       "id": "yc-022",
       "name": "Stepping Parkour",
       "related": "ShadowD（ammo-C4、ZYX）",
-      "note": "（裤）",
+      "note": "",
       "evidenceUrl": "https://space.bilibili.com/501185163?spm_id_from=333.788.upinfo.head.click",
       "evidenceHost": "space.bilibili.com",
       "images": [
@@ -740,7 +738,7 @@
           "url": "assets/images/yc-022-evidence.png"
         }
       ],
-      "status": "有备注与证据",
+      "status": "有证据",
       "tags": [
         "B站"
       ]

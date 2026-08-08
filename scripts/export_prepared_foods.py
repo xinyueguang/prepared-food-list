@@ -257,6 +257,9 @@ def build_payload(xlsx_path: Path) -> dict:
     items: list[dict[str, object]] = []
     image_output_dir = Path("docs/assets/images")
     image_output_dir.mkdir(parents=True, exist_ok=True)
+    for stale_image in image_output_dir.glob("yc-*"):
+        if stale_image.is_file():
+            stale_image.unlink()
 
     if rows and has_header_row(rows[0][1]):
         header = rows[0][1]
