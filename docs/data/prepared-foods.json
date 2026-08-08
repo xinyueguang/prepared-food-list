@@ -1,12 +1,12 @@
 {
   "title": "预制菜名单",
   "sourceFile": "预制菜.xlsx",
-  "generatedAt": "2026-08-08T19:42:43+08:00",
+  "generatedAt": "2026-08-08T22:40:59+08:00",
   "summary": {
     "total": 24,
     "withEvidence": 24,
     "withNotes": 1,
-    "relatedCount": 21,
+    "relatedCount": 17,
     "withImages": 24
   },
   "columns": {
@@ -19,7 +19,7 @@
     {
       "id": "yc-001",
       "name": "神农尝bug",
-      "related": "克势力工作室（聚光灯-槐树店工作室）",
+      "related": "克势力工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -46,14 +46,12 @@
         }
       ],
       "status": "有证据",
-      "tags": [
-        "聚光灯"
-      ]
+      "tags": []
     },
     {
       "id": "yc-002",
       "name": "菇与勇者",
-      "related": "疯狂星期三（回想共鸣）",
+      "related": "疯狂星期三",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -85,7 +83,7 @@
     {
       "id": "yc-003",
       "name": "被神注视的游戏",
-      "related": "SN（钉子超人、SuperNail）",
+      "related": "SN",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -117,7 +115,7 @@
     {
       "id": "yc-004",
       "name": "寄生毒液ParasiticVenom",
-      "related": "SN（SuperNail）",
+      "related": "SN",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -181,7 +179,7 @@
     {
       "id": "yc-006",
       "name": "Glitch",
-      "related": "celia（X的工作室8）",
+      "related": "celia",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -213,7 +211,7 @@
     {
       "id": "yc-007",
       "name": "主播模拟器",
-      "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
+      "related": "亚当工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -240,9 +238,7 @@
         }
       ],
       "status": "有证据",
-      "tags": [
-        "聚光灯"
-      ]
+      "tags": []
     },
     {
       "id": "yc-008",
@@ -279,7 +275,7 @@
     {
       "id": "yc-009",
       "name": "拟态BABY",
-      "related": "樊夢工作室（秦始皇、孔子与熊）",
+      "related": "樊夢工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -311,7 +307,7 @@
     {
       "id": "yc-010",
       "name": "未定义行为",
-      "related": "CUBR游戏工作室（垣界猫行工作室、浮华）",
+      "related": "CUBR游戏工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -343,7 +339,7 @@
     {
       "id": "yc-011",
       "name": "虫虫家装",
-      "related": "甲壳虫工作室（虫虫工作室）",
+      "related": "甲壳虫工作室",
       "note": "",
       "evidenceUrl": "",
       "evidenceHost": "",
@@ -375,7 +371,7 @@
     {
       "id": "yc-012",
       "name": "镜中人",
-      "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
+      "related": "亚当工作室",
       "note": "",
       "evidenceUrl": "https://www.bilibili.com/video/BV1xVKVzCEcM/?spm_id_from=333.337.search-card.all.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
       "evidenceHost": "bilibili.com",
@@ -403,7 +399,6 @@
       ],
       "status": "有证据",
       "tags": [
-        "聚光灯",
         "B站"
       ]
     },
