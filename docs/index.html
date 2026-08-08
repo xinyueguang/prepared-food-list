@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>预制菜名单</title>
-    <link rel="stylesheet" href="./styles.css?v=20260808-image-wide">
+    <link rel="stylesheet" href="./styles.css?v=20260808-p5-inspired">
   </head>
   <body>
+    <div class="poster-bg" aria-hidden="true">
+      <span class="poster-bg__stripe poster-bg__stripe--one"></span>
+      <span class="poster-bg__stripe poster-bg__stripe--two"></span>
+      <span class="poster-bg__target"></span>
+    </div>
+
     <header class="topbar">
       <a class="brand" href="./" aria-label="预制菜名单首页">
         <span class="brand__mark" aria-hidden="true">
@@ -34,7 +40,9 @@
       <section class="summary-band" aria-label="数据概览">
         <div class="summary-copy">
           <p class="eyebrow">数据表：预制菜</p>
-          <h1>名单检索与证据索引</h1>
+          <h1 class="cutout-title" aria-label="名单检索与证据索引">
+            <span>名</span><span>单</span><span>检</span><span>索</span><span>与</span><span>证</span><span>据</span><span>索</span><span>引</span>
+          </h1>
           <p>面向公开核验的条目展示页。所有条目保留来源备注与外部证据链接，最终判断仍需人工交叉确认。</p>
         </div>
         <div class="metric-grid" aria-label="统计">
@@ -165,6 +173,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="./app.js?v=20260808-image-wide" defer></script>
+    <script src="./app.js?v=20260808-p5-inspired" defer></script>
   </body>
 </html>

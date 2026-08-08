@@ -1,5 +1,5 @@
 const CONFIG = {
-  dataUrl: "./data/prepared-foods.json?v=20260808-image-wide",
+  dataUrl: "./data/prepared-foods.json?v=20260808-p5-inspired",
   githubOwner: "xinyueguang",
   githubRepo: "prepared-food-list",
   submissionEndpoint: "",
@@ -152,7 +152,7 @@ function renderRows() {
   elements.rows.innerHTML = state.filtered
     .map(
       (item, index) => `
-        <tr>
+        <tr class="case-row ${index % 2 === 0 ? "case-row--red" : "case-row--black"}">
           <td class="col-index">${index + 1}</td>
           <td class="image-compare-cell">
             ${renderImageComparison(item)}
