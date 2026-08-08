@@ -1,13 +1,8 @@
 const CONFIG = {
-  dataUrl: "./data/prepared-foods.json?v=20260808-moving-ad",
+  dataUrl: "./data/prepared-foods.json?v=20260808-clean",
   githubOwner: "xinyueguang",
   githubRepo: "prepared-food-list",
   submissionEndpoint: "",
-  adImages: [
-    "./assets/ads/moving-ad-1.png",
-    "./assets/ads/moving-ad-2.png",
-    "./assets/ads/moving-ad-3.png",
-  ],
 };
 
 const state = {
@@ -36,9 +31,6 @@ const elements = {
   submissionForm: document.querySelector("#submissionForm"),
   copySubmission: document.querySelector("#copySubmission"),
   submissionMode: document.querySelector("#submissionMode"),
-  floatingAd: document.querySelector("#floatingAd"),
-  floatingAdImage: document.querySelector("#floatingAdImage"),
-  closeFloatingAd: document.querySelector("#closeFloatingAd"),
   toast: document.querySelector("#toast"),
 };
 
@@ -322,80 +314,6 @@ async function loadData() {
   }
 }
 
-function setupFloatingAd() {
-  const ad = elements.floatingAd;
-  const image = elements.floatingAdImage;
-  const closeButton = elements.closeFloatingAd;
-  if (!ad || !image || !closeButton || CONFIG.adImages.length === 0) return;
-
-  const margin = 10;
-  const topGuard = () => Math.min(92, Math.max(12, window.innerHeight * 0.12));
-  let x = Math.max(margin, window.innerWidth - ad.offsetWidth - 48);
-  let y = Math.max(topGuard(), window.innerHeight * 0.18);
-  let vx = 48;
-  let vy = 34;
-  let imageIndex = 0;
-  let lastTime = performance.now();
-  let lastSwitch = lastTime;
-  let frameId = 0;
-
-  function clampPosition() {
-    const rect = ad.getBoundingClientRect();
-    const maxX = Math.max(margin, window.innerWidth - rect.width - margin);
-    const maxY = Math.max(topGuard(), window.innerHeight - rect.height - margin);
-    x = Math.min(Math.max(margin, x), maxX);
-    y = Math.min(Math.max(topGuard(), y), maxY);
-  }
-
-  function setImage(index) {
-    image.src = CONFIG.adImages[index];
-  }
-
-  function tick(now) {
-    const dt = Math.min(0.05, (now - lastTime) / 1000);
-    lastTime = now;
-
-    if (now - lastSwitch > 3600) {
-      imageIndex = (imageIndex + 1) % CONFIG.adImages.length;
-      setImage(imageIndex);
-      lastSwitch = now;
-    }
-
-    const rect = ad.getBoundingClientRect();
-    const minY = topGuard();
-    const maxX = Math.max(margin, window.innerWidth - rect.width - margin);
-    const maxY = Math.max(minY, window.innerHeight - rect.height - margin);
-    x += vx * dt;
-    y += vy * dt;
-
-    if (x <= margin || x >= maxX) {
-      x = Math.min(Math.max(margin, x), maxX);
-      vx *= -1;
-    }
-    if (y <= minY || y >= maxY) {
-      y = Math.min(Math.max(minY, y), maxY);
-      vy *= -1;
-    }
-
-    ad.style.transform = `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0) rotate(-2deg)`;
-    frameId = window.requestAnimationFrame(tick);
-  }
-
-  closeButton.addEventListener("click", () => {
-    ad.hidden = true;
-    window.cancelAnimationFrame(frameId);
-  });
-
-  window.addEventListener("resize", () => {
-    clampPosition();
-    ad.style.transform = `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0) rotate(-2deg)`;
-  });
-
-  setImage(imageIndex);
-  clampPosition();
-  frameId = window.requestAnimationFrame(tick);
-}
-
 elements.search.addEventListener("input", applyFilters);
 elements.statusFilter.addEventListener("change", applyFilters);
 elements.relatedFilter.addEventListener("change", applyFilters);
@@ -429,4 +347,3 @@ if (CONFIG.submissionEndpoint) {
 }
 
 loadData();
-setupFloatingAd();
