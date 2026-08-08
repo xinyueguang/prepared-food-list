@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>预制菜名单</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="预制菜名单首页">
+        <span class="brand__mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span>
+          <strong>预制菜名单</strong>
+          <small>公开线索整理</small>
+        </span>
+      </a>
+      <nav class="topbar__actions" aria-label="页面操作">
+        <a class="icon-button" href="./data/prepared-foods.csv" download title="下载 CSV" aria-label="下载 CSV">
+          <span aria-hidden="true">↓</span>
+        </a>
+        <button class="primary-button" id="openSubmit" type="button">
+          <span aria-hidden="true">＋</span>
+          投稿
+        </button>
+      </nav>
+    </header>
+
+    <main class="app">
+      <section class="summary-band" aria-label="数据概览">
+        <div class="summary-copy">
+          <p class="eyebrow">数据表：预制菜</p>
+          <h1>名单检索与证据索引</h1>
+          <p>面向公开核验的条目展示页。所有条目保留来源备注与外部证据链接，最终判断仍需人工交叉确认。</p>
+        </div>
+        <div class="metric-grid" aria-label="统计">
+          <div class="metric">
+            <span id="totalCount">--</span>
+            <small>条目</small>
+          </div>
+          <div class="metric">
+            <span id="evidenceCount">--</span>
+            <small>证据链接</small>
+          </div>
+          <div class="metric">
+            <span id="noteCount">--</span>
+            <small>备注</small>
+          </div>
+          <div class="metric">
+            <span id="relatedCount">--</span>
+            <small>关联对象</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="筛选">
+        <label class="field field--search">
+          <span>搜索</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="条目、关联对象、备注、链接">
+        </label>
+        <label class="field">
+          <span>状态</span>
+          <select id="statusFilter">
+            <option value="">全部状态</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>关联对象</span>
+          <select id="relatedFilter">
+            <option value="">全部关联对象</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>证据</span>
+          <select id="evidenceFilter">
+            <option value="">全部</option>
+            <option value="with">有链接</option>
+            <option value="without">待补充</option>
+          </select>
+        </label>
+        <button class="secondary-button" id="copyVisible" type="button">
+          <span aria-hidden="true">⎘</span>
+          复制结果
+        </button>
+      </section>
+
+      <section class="table-section" aria-label="名单">
+        <div class="table-section__head">
+          <div>
+            <h2>当前结果</h2>
+            <p id="dataMeta">正在载入数据...</p>
+          </div>
+          <span class="result-count" id="resultCount">--</span>
+        </div>
+        <div class="table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th class="col-index">#</th>
+                <th>条目</th>
+                <th>关联对象</th>
+                <th>状态</th>
+                <th>备注</th>
+                <th>证据</th>
+              </tr>
+            </thead>
+            <tbody id="itemsBody"></tbody>
+          </table>
+          <div class="empty-state" id="emptyState" hidden>没有匹配结果</div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="submit-dialog" id="submitDialog">
+      <form class="submit-form" id="submissionForm" method="dialog">
+        <div class="dialog-head">
+          <div>
+            <p class="eyebrow">投稿入口</p>
+            <h2>提交新线索</h2>
+          </div>
+          <button class="icon-button" value="cancel" title="关闭" aria-label="关闭">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+        <label class="field">
+          <span>条目名称</span>
+          <input id="submissionName" name="name" required autocomplete="off">
+        </label>
+        <label class="field">
+          <span>关联对象</span>
+          <input id="submissionRelated" name="related" autocomplete="off">
+        </label>
+        <label class="field">
+          <span>证据链接</span>
+          <input id="submissionEvidence" name="evidenceUrl" type="url" autocomplete="off">
+        </label>
+        <label class="field">
+          <span>备注</span>
+          <textarea id="submissionNote" name="note" rows="4"></textarea>
+        </label>
+        <label class="field">
+          <span>联系方式</span>
+          <input id="submissionContact" name="contact" autocomplete="off">
+        </label>
+
+        <div class="dialog-actions">
+          <button class="secondary-button" id="copySubmission" type="button">
+            <span aria-hidden="true">⎘</span>
+            复制 JSON
+          </button>
+          <button class="primary-button" id="sendSubmission" type="submit">
+            <span aria-hidden="true">↗</span>
+            提交
+          </button>
+        </div>
+        <p class="form-note" id="submissionMode">当前投稿会进入 GitHub Issues，合并到数据前需要人工核验。</p>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

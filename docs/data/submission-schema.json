@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "预制菜名单投稿",
+  "type": "object",
+  "required": ["name"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "条目名称"
+    },
+    "related": {
+      "type": "string",
+      "title": "关联对象"
+    },
+    "evidenceUrl": {
+      "type": "string",
+      "format": "uri",
+      "title": "证据链接"
+    },
+    "note": {
+      "type": "string",
+      "title": "备注"
+    },
+    "contact": {
+      "type": "string",
+      "title": "联系方式"
+    },
+    "submittedAt": {
+      "type": "string",
+      "format": "date-time",
+      "title": "提交时间"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.log
+server.out.log
+server.err.log
+scratch/
+*.xlsx
+reports/*-cache.json

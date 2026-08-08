@@ -1,0 +1,288 @@
+{
+  "title": "预制菜名单",
+  "sourceFile": "预制菜.xlsx",
+  "generatedAt": "2026-08-08T13:18:26+08:00",
+  "summary": {
+    "total": 24,
+    "withEvidence": 8,
+    "withNotes": 10,
+    "relatedCount": 19
+  },
+  "columns": {
+    "name": "条目",
+    "related": "关联对象",
+    "note": "备注",
+    "evidenceUrl": "证据链接"
+  },
+  "items": [
+    {
+      "id": "yc-001",
+      "name": "神农尝bug",
+      "related": "克势力工作室（聚光灯-槐树店工作室）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": [
+        "聚光灯"
+      ]
+    },
+    {
+      "id": "yc-002",
+      "name": "菇与勇者",
+      "related": "疯狂星期三（回想共鸣）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-003",
+      "name": "被神注视的游戏",
+      "related": "SN（钉子超人、SuperNail）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-004",
+      "name": "寄生毒液ParasiticVenom",
+      "related": "SN（SuperNail）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-005",
+      "name": "矩阵破冰者",
+      "related": "美术百分百",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-006",
+      "name": "Glitch",
+      "related": "celia（X的工作室8）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-007",
+      "name": "主播模拟器",
+      "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": [
+        "聚光灯"
+      ]
+    },
+    {
+      "id": "yc-008",
+      "name": "侠路相逢",
+      "related": "冒险者小队",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-009",
+      "name": "拟态BABY",
+      "related": "樊夢工作室（秦始皇、孔子与熊）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-010",
+      "name": "未定义行为",
+      "related": "CUBR游戏工作室（垣界猫行工作室、浮华）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-011",
+      "name": "虫虫家装",
+      "related": "甲壳虫工作室（虫虫工作室）",
+      "note": "",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "待补充证据",
+      "tags": []
+    },
+    {
+      "id": "yc-012",
+      "name": "镜中人",
+      "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
+      "note": "",
+      "evidenceUrl": "https://www.bilibili.com/video/BV1xVKVzCEcM/?spm_id_from=333.337.search-card.all.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
+      "evidenceHost": "bilibili.com",
+      "status": "有证据链接",
+      "tags": [
+        "聚光灯",
+        "B站"
+      ]
+    },
+    {
+      "id": "yc-013",
+      "name": "冒牌上班族",
+      "related": "浮华（垣界猫行工作室、CUBR游戏工作室）",
+      "note": "（裤）",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "有备注",
+      "tags": []
+    },
+    {
+      "id": "yc-014",
+      "name": "小鸥快骰",
+      "related": "“无开发者验证”（回游工作室）",
+      "note": "（裤）",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "有备注",
+      "tags": [
+        "无开发者验证"
+      ]
+    },
+    {
+      "id": "yc-015",
+      "name": "听山",
+      "related": "“无开发者验证”（克势力工作室）",
+      "note": "（裤）",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "有备注",
+      "tags": [
+        "无开发者验证"
+      ]
+    },
+    {
+      "id": "yc-016",
+      "name": "端点：入侵协议",
+      "related": "MYB（三山工作室）",
+      "note": "b站与比赛同素材，不同颜色，但素材和玩法依然一模一样",
+      "evidenceUrl": "https://www.bilibili.com/video/BV1oQXaBHE1Z/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
+      "evidenceHost": "bilibili.com",
+      "status": "有备注与链接",
+      "tags": [
+        "B站"
+      ]
+    },
+    {
+      "id": "yc-017",
+      "name": "Eclipsa",
+      "related": "亚当工作室（聚光灯-亚当工作室、ADAM亚当工作室、FlowGame）",
+      "note": "（裤）",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "有备注",
+      "tags": [
+        "聚光灯"
+      ]
+    },
+    {
+      "id": "yc-018",
+      "name": "奶茶店模拟器：重生之我在冰堡甜城当店长",
+      "related": "财可咪工作室（Erabit（疑似发行））",
+      "note": "（裤）",
+      "evidenceUrl": "",
+      "evidenceHost": "",
+      "status": "有备注",
+      "tags": [
+        "疑似"
+      ]
+    },
+    {
+      "id": "yc-019",
+      "name": "Dream Builder",
+      "related": "橘黄色苏丹三",
+      "note": "（裤）",
+      "evidenceUrl": "https://www.bilibili.com/video/BV1RgzZYfECt/?spm_id_from=333.337.search-card.all.click&vd_source=3e560f1e17dc1836cb3ca08889357990",
+      "evidenceHost": "bilibili.com",
+      "status": "有备注与链接",
+      "tags": [
+        "B站"
+      ]
+    },
+    {
+      "id": "yc-020",
+      "name": "Eat Is Rule",
+      "related": "CUBR游戏工作室（垣界猫行工作室、浮华）",
+      "note": "（裤）",
+      "evidenceUrl": "https://www.bilibili.com/video/BV1acSyBNEsW/?vd_source=3e560f1e17dc1836cb3ca08889357990",
+      "evidenceHost": "bilibili.com",
+      "status": "有备注与链接",
+      "tags": [
+        "B站"
+      ]
+    },
+    {
+      "id": "yc-021",
+      "name": "Lord of Wonders",
+      "related": "ZYX（ammo-C4）",
+      "note": "（裤）",
+      "evidenceUrl": "https://www.bilibili.com/video/BV1LF7969Evc/?vd_source=3e560f1e17dc1836cb3ca08889357990",
+      "evidenceHost": "bilibili.com",
+      "status": "有备注与链接",
+      "tags": [
+        "B站"
+      ]
+    },
+    {
+      "id": "yc-022",
+      "name": "Stepping Parkour",
+      "related": "ShadowD（ammo-C4、ZYX）",
+      "note": "（裤）",
+      "evidenceUrl": "https://space.bilibili.com/501185163?spm_id_from=333.788.upinfo.head.click",
+      "evidenceHost": "space.bilibili.com",
+      "status": "有备注与链接",
+      "tags": [
+        "B站"
+      ]
+    },
+    {
+      "id": "yc-023",
+      "name": "回忆回想",
+      "related": "SN（SuperNail）",
+      "note": "",
+      "evidenceUrl": "https://supernail.itch.io/echoes-of-memories",
+      "evidenceHost": "supernail.itch.io",
+      "status": "有证据链接",
+      "tags": [
+        "itch.io"
+      ]
+    },
+    {
+      "id": "yc-024",
+      "name": "块块相连",
+      "related": "SN（SuperNail）",
+      "note": "",
+      "evidenceUrl": "https://www.bilibili.com/video/BV19bwjzsEVd/?vd_source=7b47ccdeb6676630869e49a80d2f842a",
+      "evidenceHost": "bilibili.com",
+      "status": "有证据链接",
+      "tags": [
+        "B站"
+      ]
+    }
+  ]
+}
