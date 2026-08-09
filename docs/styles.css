@@ -969,14 +969,6 @@ td {
   font-weight: 1000;
 }
 
-.announcement-panel__head span {
-  padding: 2px 8px;
-  color: #000000;
-  background: var(--yellow);
-  font-size: 12px;
-  transform: rotate(-2deg);
-}
-
 .announcement-panel__head strong {
   overflow: hidden;
   text-overflow: ellipsis;
