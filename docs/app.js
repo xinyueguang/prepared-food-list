@@ -1,5 +1,6 @@
 const CONFIG = {
-  dataUrl: "./data/prepared-foods.json?v=20260809-table",
+  dataUrl: "./data/prepared-foods.json?v=20260809-images",
+  assetVersion: "20260809-images",
   githubOwner: "xinyueguang",
   githubRepo: "prepared-food-list",
   submissionEndpoint: "",
@@ -90,6 +91,12 @@ function renderEvidence(item) {
   return `<a class="evidence-link" href="${escapeHtml(item.evidenceUrl)}" target="_blank" rel="noreferrer"><span>${escapeHtml(label)}</span></a>`;
 }
 
+function versionedAssetUrl(url) {
+  if (!url || /^https?:\/\//i.test(url)) return url;
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}v=${encodeURIComponent(CONFIG.assetVersion)}`;
+}
+
 function renderImagePanel(label, image) {
   if (!image) {
     return `
@@ -100,11 +107,12 @@ function renderImagePanel(label, image) {
     `;
   }
 
+  const imageUrl = versionedAssetUrl(image.url);
   return `
-    <a class="compare-panel" href="${escapeHtml(image.url)}" target="_blank" rel="noreferrer" title="打开${escapeHtml(label)}">
+    <a class="compare-panel" href="${escapeHtml(imageUrl)}" target="_blank" rel="noreferrer" title="打开${escapeHtml(label)}">
       <div class="compare-panel__head">${escapeHtml(label)}</div>
       <div class="compare-frame">
-        <img src="${escapeHtml(image.url)}" alt="${escapeHtml(label)}">
+        <img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(label)}">
       </div>
     </a>
   `;

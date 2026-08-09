@@ -236,7 +236,12 @@ def write_item_images(
     output_dir: Path,
 ) -> list[dict[str, str]]:
     extracted: list[dict[str, str]] = []
-    for image_index, image in enumerate(images.get((row_number, col_index), []), start=1):
+    cell_images = images.get((row_number, col_index), [])
+    if not cell_images:
+        return extracted
+
+    # Later drawing anchors render above earlier ones when images overlap in the same cell.
+    for image_index, image in enumerate([cell_images[-1]], start=1):
         extension = str(image["extension"])
         suffix = f"-{image_index}" if image_index > 1 else ""
         filename = f"{item_id}-{slug}{suffix}{extension}"
