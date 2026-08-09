@@ -1,5 +1,5 @@
 const CONFIG = {
-  dataUrl: "./data/prepared-foods.json?v=20260808-uploader",
+  dataUrl: "./data/prepared-foods.json?v=20260809-table",
   githubOwner: "xinyueguang",
   githubRepo: "prepared-food-list",
   submissionEndpoint: "",

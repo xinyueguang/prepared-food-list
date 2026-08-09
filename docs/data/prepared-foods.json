@@ -1,13 +1,13 @@
 {
   "title": "预制菜名单",
   "sourceFile": "预制菜.xlsx",
-  "generatedAt": "2026-08-08T23:44:43+08:00",
+  "generatedAt": "2026-08-09T17:30:52+08:00",
   "summary": {
-    "total": 24,
-    "withEvidence": 24,
-    "withNotes": 1,
-    "relatedCount": 17,
-    "withImages": 24
+    "total": 3,
+    "withEvidence": 3,
+    "withNotes": 0,
+    "relatedCount": 3,
+    "withImages": 3
   },
   "columns": {
     "name": "条目",
@@ -18,230 +18,6 @@
   "items": [
     {
       "id": "yc-001",
-      "name": "神农尝bug",
-      "related": "克势力工作室",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-001-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-001-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-001-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-001-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-002",
-      "name": "菇与勇者",
-      "related": "疯狂星期三",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-002-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-002-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-002-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-002-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-003",
-      "name": "被神注视的游戏",
-      "related": "SN",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-003-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-003-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-003-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-003-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-004",
-      "name": "寄生毒液ParasiticVenom",
-      "related": "SN",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-004-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-004-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-004-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-004-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-005",
-      "name": "矩阵破冰者",
-      "related": "美术百分百",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-005-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-005-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-005-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-005-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-006",
-      "name": "Glitch",
-      "related": "celia",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-006-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-006-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-006-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-006-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-007",
-      "name": "主播模拟器",
-      "related": "亚当工作室",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-007-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-007-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-007-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-007-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-008",
       "name": "侠路相逢",
       "related": "冒险者小队",
       "note": "",
@@ -250,94 +26,46 @@
       "images": [
         {
           "label": "金海豚项目",
-          "url": "assets/images/yc-008-project.png"
+          "url": "assets/images/yc-001-project.png"
+        },
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-001-project-2.png"
         },
         {
           "label": "证据",
-          "url": "assets/images/yc-008-evidence.png"
+          "url": "assets/images/yc-001-evidence.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-001-evidence-2.png"
         }
       ],
       "projectImages": [
         {
           "label": "金海豚项目",
-          "url": "assets/images/yc-008-project.png"
+          "url": "assets/images/yc-001-project.png"
+        },
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-001-project-2.png"
         }
       ],
       "evidenceImages": [
         {
           "label": "证据",
-          "url": "assets/images/yc-008-evidence.png"
+          "url": "assets/images/yc-001-evidence.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-001-evidence-2.png"
         }
       ],
       "status": "有证据",
       "tags": []
     },
     {
-      "id": "yc-009",
-      "name": "拟态BABY",
-      "related": "樊夢工作室",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-009-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-009-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-009-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-009-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-010",
-      "name": "未定义行为",
-      "related": "CUBR游戏工作室",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-010-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-010-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-010-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-010-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-011",
+      "id": "yc-002",
       "name": "虫虫家装",
       "related": "甲壳虫工作室",
       "note": "",
@@ -346,230 +74,46 @@
       "images": [
         {
           "label": "金海豚项目",
-          "url": "assets/images/yc-011-project.png"
+          "url": "assets/images/yc-002-project.png"
+        },
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-002-project-2.png"
         },
         {
           "label": "证据",
-          "url": "assets/images/yc-011-evidence.png"
+          "url": "assets/images/yc-002-evidence.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-002-evidence-2.png"
         }
       ],
       "projectImages": [
         {
           "label": "金海豚项目",
-          "url": "assets/images/yc-011-project.png"
+          "url": "assets/images/yc-002-project.png"
+        },
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-002-project-2.png"
         }
       ],
       "evidenceImages": [
         {
           "label": "证据",
-          "url": "assets/images/yc-011-evidence.png"
+          "url": "assets/images/yc-002-evidence.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-002-evidence-2.png"
         }
       ],
       "status": "有证据",
       "tags": []
     },
     {
-      "id": "yc-012",
-      "name": "镜中人",
-      "related": "亚当工作室",
-      "note": "",
-      "evidenceUrl": "https://www.bilibili.com/video/BV1xVKVzCEcM/?spm_id_from=333.337.search-card.all.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
-      "evidenceHost": "bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-012-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-012-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-012-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-012-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "B站"
-      ]
-    },
-    {
-      "id": "yc-013",
-      "name": "冒牌上班族",
-      "related": "浮华",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-013-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-013-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-013-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-013-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-014",
-      "name": "小鸥快骰",
-      "related": "“无开发者验证”",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-014-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-014-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-014-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-014-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "无开发者验证"
-      ]
-    },
-    {
-      "id": "yc-015",
-      "name": "听山",
-      "related": "“无开发者验证”",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-015-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-015-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-015-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-015-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "无开发者验证"
-      ]
-    },
-    {
-      "id": "yc-016",
-      "name": "端点：入侵协议",
-      "related": "MYB",
-      "note": "b站与比赛同素材，不同颜色，但素材和玩法依然一模一样",
-      "evidenceUrl": "https://www.bilibili.com/video/BV1oQXaBHE1Z/?spm_id_from=333.1387.homepage.video_card.click&vd_source=7b47ccdeb6676630869e49a80d2f842a",
-      "evidenceHost": "bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-016-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-016-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-016-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-016-evidence.png"
-        }
-      ],
-      "status": "有备注与证据",
-      "tags": [
-        "B站"
-      ]
-    },
-    {
-      "id": "yc-017",
-      "name": "Eclipsa",
-      "related": "亚当工作室",
-      "note": "",
-      "evidenceUrl": "",
-      "evidenceHost": "",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-017-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-017-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-017-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-017-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": []
-    },
-    {
-      "id": "yc-018",
+      "id": "yc-003",
       "name": "奶茶店模拟器：重生之我在冰堡甜城当店长",
       "related": "财可咪工作室",
       "note": "",
@@ -578,231 +122,43 @@
       "images": [
         {
           "label": "金海豚项目",
-          "url": "assets/images/yc-018-project.png"
+          "url": "assets/images/yc-003-project.png"
+        },
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-003-project-2.png"
         },
         {
           "label": "证据",
-          "url": "assets/images/yc-018-evidence.png"
+          "url": "assets/images/yc-003-evidence.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-003-evidence-2.png"
         }
       ],
       "projectImages": [
         {
           "label": "金海豚项目",
-          "url": "assets/images/yc-018-project.png"
+          "url": "assets/images/yc-003-project.png"
+        },
+        {
+          "label": "金海豚项目",
+          "url": "assets/images/yc-003-project-2.png"
         }
       ],
       "evidenceImages": [
         {
           "label": "证据",
-          "url": "assets/images/yc-018-evidence.png"
+          "url": "assets/images/yc-003-evidence.png"
+        },
+        {
+          "label": "证据",
+          "url": "assets/images/yc-003-evidence-2.png"
         }
       ],
       "status": "有证据",
       "tags": []
-    },
-    {
-      "id": "yc-019",
-      "name": "Dream Builder",
-      "related": "橘黄色苏丹三",
-      "note": "",
-      "evidenceUrl": "https://www.bilibili.com/video/BV1RgzZYfECt/?spm_id_from=333.337.search-card.all.click&vd_source=3e560f1e17dc1836cb3ca08889357990",
-      "evidenceHost": "bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-019-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-019-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-019-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-019-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "B站"
-      ]
-    },
-    {
-      "id": "yc-020",
-      "name": "Eat Is Rule",
-      "related": "CUBR游戏工作室",
-      "note": "",
-      "evidenceUrl": "https://www.bilibili.com/video/BV1acSyBNEsW/?vd_source=3e560f1e17dc1836cb3ca08889357990",
-      "evidenceHost": "bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-020-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-020-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-020-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-020-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "B站"
-      ]
-    },
-    {
-      "id": "yc-021",
-      "name": "Lord of Wonders",
-      "related": "ZYX",
-      "note": "",
-      "evidenceUrl": "https://www.bilibili.com/video/BV1LF7969Evc/?vd_source=3e560f1e17dc1836cb3ca08889357990",
-      "evidenceHost": "bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-021-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-021-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-021-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-021-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "B站"
-      ]
-    },
-    {
-      "id": "yc-022",
-      "name": "Stepping Parkour",
-      "related": "ShadowD",
-      "note": "",
-      "evidenceUrl": "https://space.bilibili.com/501185163?spm_id_from=333.788.upinfo.head.click",
-      "evidenceHost": "space.bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-022-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-022-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-022-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-022-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "B站"
-      ]
-    },
-    {
-      "id": "yc-023",
-      "name": "回忆回想",
-      "related": "SN",
-      "note": "",
-      "evidenceUrl": "https://supernail.itch.io/echoes-of-memories",
-      "evidenceHost": "supernail.itch.io",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-023-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-023-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-023-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-023-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "itch.io"
-      ]
-    },
-    {
-      "id": "yc-024",
-      "name": "块块相连",
-      "related": "SN",
-      "note": "",
-      "evidenceUrl": "https://www.bilibili.com/video/BV19bwjzsEVd/?vd_source=7b47ccdeb6676630869e49a80d2f842a",
-      "evidenceHost": "bilibili.com",
-      "images": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-024-project.png"
-        },
-        {
-          "label": "证据",
-          "url": "assets/images/yc-024-evidence.png"
-        }
-      ],
-      "projectImages": [
-        {
-          "label": "金海豚项目",
-          "url": "assets/images/yc-024-project.png"
-        }
-      ],
-      "evidenceImages": [
-        {
-          "label": "证据",
-          "url": "assets/images/yc-024-evidence.png"
-        }
-      ],
-      "status": "有证据",
-      "tags": [
-        "B站"
-      ]
     }
   ]
 }
