@@ -32,6 +32,8 @@ const elements = {
   submissionForm: document.querySelector("#submissionForm"),
   copySubmission: document.querySelector("#copySubmission"),
   submissionMode: document.querySelector("#submissionMode"),
+  announcementDialog: document.querySelector("#announcementDialog"),
+  closeAnnouncement: document.querySelector("#closeAnnouncement"),
   toast: document.querySelector("#toast"),
 };
 
@@ -322,6 +324,27 @@ async function loadData() {
   }
 }
 
+function setupAnnouncement() {
+  const dialog = elements.announcementDialog;
+  if (!dialog) return;
+
+  window.requestAnimationFrame(() => {
+    if (typeof dialog.showModal === "function" && !dialog.open) {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+  });
+
+  elements.closeAnnouncement?.addEventListener("click", () => {
+    if (typeof dialog.close === "function") {
+      dialog.close();
+    } else {
+      dialog.removeAttribute("open");
+    }
+  });
+}
+
 elements.search.addEventListener("input", applyFilters);
 elements.statusFilter.addEventListener("change", applyFilters);
 elements.relatedFilter.addEventListener("change", applyFilters);
@@ -355,3 +378,4 @@ if (CONFIG.submissionEndpoint) {
 }
 
 loadData();
+setupAnnouncement();
