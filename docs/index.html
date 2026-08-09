@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>预制菜名单</title>
-    <link rel="stylesheet" href="./styles.css?v=20260809-notice">
+    <link rel="stylesheet" href="./styles.css?v=20260810-announcement-button">
   </head>
   <body>
     <div class="poster-bg" aria-hidden="true">
@@ -119,6 +119,13 @@
           <div class="empty-state" id="emptyState" hidden>没有匹配结果</div>
         </div>
       </section>
+
+      <div class="announcement-trigger-row">
+        <button class="primary-button announcement-trigger" id="openAnnouncement" type="button">
+          <span aria-hidden="true">!</span>
+          查看今日声明
+        </button>
+      </div>
     </main>
 
     <dialog class="submit-dialog" id="submitDialog">
@@ -211,6 +218,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script src="./app.js?v=20260809-notice" defer></script>
+    <script src="./app.js?v=20260810-announcement-button" defer></script>
   </body>
 </html>

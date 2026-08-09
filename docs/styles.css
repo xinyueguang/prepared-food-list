@@ -516,6 +516,26 @@ h2 {
   box-shadow: var(--shadow-red);
 }
 
+.announcement-trigger-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 18px;
+  border: 5px solid #000000;
+  background:
+    linear-gradient(110deg, rgba(255, 255, 255, 0.14) 0 14%, transparent 14% 28%, rgba(0, 0, 0, 0.16) 28% 42%, transparent 42%),
+    var(--red);
+  box-shadow: var(--shadow-hard);
+  clip-path: polygon(1% 0, 100% 4%, 98% 92%, 90% 100%, 0 95%);
+}
+
+.announcement-trigger {
+  min-width: min(100%, 320px);
+  height: 52px;
+  padding: 0 24px;
+  font-size: 17px;
+}
+
 table {
   width: 100%;
   min-width: 1360px;

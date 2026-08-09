@@ -33,6 +33,7 @@ const elements = {
   copySubmission: document.querySelector("#copySubmission"),
   submissionMode: document.querySelector("#submissionMode"),
   announcementDialog: document.querySelector("#announcementDialog"),
+  openAnnouncement: document.querySelector("#openAnnouncement"),
   closeAnnouncement: document.querySelector("#closeAnnouncement"),
   toast: document.querySelector("#toast"),
 };
@@ -328,21 +329,24 @@ function setupAnnouncement() {
   const dialog = elements.announcementDialog;
   if (!dialog) return;
 
-  window.requestAnimationFrame(() => {
+  const openAnnouncement = () => {
     if (typeof dialog.showModal === "function" && !dialog.open) {
       dialog.showModal();
     } else {
       dialog.setAttribute("open", "");
     }
-  });
+  };
 
-  elements.closeAnnouncement?.addEventListener("click", () => {
+  const closeAnnouncement = () => {
     if (typeof dialog.close === "function") {
       dialog.close();
     } else {
       dialog.removeAttribute("open");
     }
-  });
+  };
+
+  elements.openAnnouncement?.addEventListener("click", openAnnouncement);
+  elements.closeAnnouncement?.addEventListener("click", closeAnnouncement);
 }
 
 elements.search.addEventListener("input", applyFilters);
